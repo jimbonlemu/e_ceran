@@ -1,13 +1,17 @@
+import 'package:e_ceran/Views/history_transaction_view.dart';
 import 'package:e_ceran/Views/home_view.dart';
 import 'package:e_ceran/Views/splash_view.dart';
+import 'package:e_ceran/Views/stuff_list_view.dart';
+import 'package:e_ceran/Views/transaction_view.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Navigates {
-
-
   static const String splashView = 'SplashView';
   static const String homeView = 'HomeView';
+  static const String transactionView = 'TransactionView';
+  static const String stuffListView = 'StuffListView';
+  static const String historyTransactionView = 'HistoryTransactionView';
 
   static Route<dynamic> routeGenerator(RouteSettings settings) {
     switch (settings.name) {
@@ -17,6 +21,17 @@ class Navigates {
       case homeView:
         return PageTransition(
             child: const HomeView(), type: PageTransitionType.leftToRight);
+      case transactionView:
+        return PageTransition(
+            child: const TransactionView(),
+            type: PageTransitionType.rightToLeft);
+      case stuffListView:
+        return PageTransition(
+            child: const StuffListView(), type: PageTransitionType.rightToLeft);
+      case historyTransactionView:
+        return PageTransition(
+            child: const HistoryTransactionView(),
+            type: PageTransitionType.rightToLeft);
       default:
         return PageTransition(
             child: const NotFoundPage('Halaman Tidak Ditemukan : 404'),
@@ -27,8 +42,8 @@ class Navigates {
 
 class NotFoundPage extends StatelessWidget {
   final String title;
- 
-   const NotFoundPage(this.title, {Key? key}) : super(key: key);
+
+  const NotFoundPage(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

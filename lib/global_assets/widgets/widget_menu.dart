@@ -1,3 +1,4 @@
+import 'package:e_ceran/global_assets/navigates.dart';
 import 'package:e_ceran/global_assets/widgets/widget_text.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class WidgetMenu extends StatelessWidget {
   final String text;
   final double padding;
   final Image? menuIcon;
-
+  final String? targetRoute;
   const WidgetMenu({
     Key? key,
     this.radiusLevel = const BorderRadius.all(Radius.circular(20)),
@@ -19,31 +20,41 @@ class WidgetMenu extends StatelessWidget {
     this.padding = 20,
     this.menuIcon,
     this.text = '',
+    this.targetRoute,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(15),
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: radiusLevel,
-            child: Container(
-              color: backGroundColor,
-              height: height,
-              width: width,
-              child: menuIcon,
+    return InkWell(
+      onTap: () {
+        if (targetRoute == null) {
+          print("targetRoute is Null, targetRoute wouldn't work !");
+        } else {
+          Navigator.of(context).pushNamed(targetRoute!);
+        }
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(15),
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: radiusLevel,
+              child: Container(
+                color: backGroundColor,
+                height: height,
+                width: width,
+                child: menuIcon,
+              ),
             ),
-          ),
-          SizedBox(
-            height: padding,
-          ),
-          WidgetText(
-            text: text,
-            textSize: 17,
-          ),
-        ],
+            SizedBox(
+              height: padding,
+            ),
+            WidgetText(
+              text: text,
+              textSize: 17,
+            ),
+          ],
+        ),
       ),
     );
   }

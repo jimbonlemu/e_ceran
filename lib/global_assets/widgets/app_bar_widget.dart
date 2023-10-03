@@ -20,7 +20,10 @@ class AppBarFormat extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: enabledBackButton!,
       leading: enabledBackButton!
           ? IconButton(
-              icon: const Icon(Icons.arrow_back_ios),
+              icon: const Icon(
+                Icons.arrow_back_ios,
+                color: Colors.black,
+              ),
               onPressed: () {
                 Navigator.pop(context);
               },
