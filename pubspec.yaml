@@ -75,7 +75,27 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+
+      - family: Arimo_regular
+        fonts :
+          - asset: assets/fonts/Arimo-Regular.ttf
+
+      - family: Arimo_italic
+        fonts :
+          - asset: assets/fonts/Arimo-Regular.ttf
+      
+      - family: Arimo_medium
+        fonts :
+          - asset: assets/fonts/Arimo-Medium.ttf
+      
+      - family: Arimo_semibold
+        fonts :
+          - asset: assets/fonts/Arimo-SemiBold.ttf
+      
+      - family: Arimo_bold
+        fonts :
+          - asset: assets/fonts/Arimo-Bold.ttf            
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

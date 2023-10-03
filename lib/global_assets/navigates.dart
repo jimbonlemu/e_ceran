@@ -4,25 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Navigates {
-  static const String notfound = 'SplashView';
+
 
   static const String splashView = 'SplashView';
   static const String homeView = 'HomeView';
-
 
   static Route<dynamic> routeGenerator(RouteSettings settings) {
     switch (settings.name) {
       case splashView:
         return PageTransition(
-            child: const SplashView(), type: PageTransitionType.fade);
+            child: const SplashView(), type: PageTransitionType.leftToRight);
       case homeView:
         return PageTransition(
-            child: const HomeView(), type: PageTransitionType.fade);
-      case notfound:
-        return PageTransition(
-            child: const NotFoundPage('Halaman Tidak Ditemukan : 404'),
-            type: PageTransitionType.fade);
-      
+            child: const HomeView(), type: PageTransitionType.leftToRight);
       default:
         return PageTransition(
             child: const NotFoundPage('Halaman Tidak Ditemukan : 404'),
@@ -32,9 +26,9 @@ class Navigates {
 }
 
 class NotFoundPage extends StatelessWidget {
-  const NotFoundPage(this.title);
-
   final String title;
+ 
+   const NotFoundPage(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +36,15 @@ class NotFoundPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Center(
-          child: Text(title),
+          child: Text(
+            title,
+            style: const TextStyle(
+              fontFamily: 'Arimo_bold',
+              color: Colors.black,
+              letterSpacing: 2.5,
+              fontSize: 20,
+            ),
+          ),
         ),
       ),
     );

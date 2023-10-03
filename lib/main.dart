@@ -1,6 +1,4 @@
-import 'package:e_ceran/Views/splash_view.dart';
 import 'package:flutter/material.dart';
-
 import 'global_assets/navigates.dart';
 
 void main() {
