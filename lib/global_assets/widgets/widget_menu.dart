@@ -23,22 +23,28 @@ class WidgetMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ClipRRect(
-          borderRadius: radiusLevel,
-          child: Container(
-            color: backGroundColor,
-            height: height,
-            width: width,
-            child: menuIcon,
+    return Padding(
+      padding: const EdgeInsets.all(15),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: radiusLevel,
+            child: Container(
+              color: backGroundColor,
+              height: height,
+              width: width,
+              child: menuIcon,
+            ),
           ),
-        ),
-        SizedBox(
-          height: padding,
-        ),
-        WidgetText(text: text),
-      ],
+          SizedBox(
+            height: padding,
+          ),
+          WidgetText(
+            text: text,
+            textSize: 17,
+          ),
+        ],
+      ),
     );
   }
 }
