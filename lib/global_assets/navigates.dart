@@ -1,8 +1,8 @@
-import 'package:e_ceran/Views/history_transaction_view.dart';
-import 'package:e_ceran/Views/home_view.dart';
+import 'package:e_ceran/Views/dashboard_menu/history_transaction_view.dart';
+import 'package:e_ceran/Views/dashboard_view.dart';
 import 'package:e_ceran/Views/splash_view.dart';
-import 'package:e_ceran/Views/stuff_list_view.dart';
-import 'package:e_ceran/Views/transaction_view.dart';
+import 'package:e_ceran/Views/dashboard_menu/stuff_list_view.dart';
+import 'package:e_ceran/Views/dashboard_menu/transaction_view.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 

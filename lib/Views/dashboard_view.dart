@@ -4,6 +4,7 @@ import 'package:e_ceran/global_assets/widgets/widget_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../global_assets/widgets/app_bar_widget.dart';
+import '../global_assets/widgets/widget_text.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -15,20 +16,24 @@ class HomeView extends StatelessWidget {
         return await showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text('Konfirmasi'),
-            content: Text('Apakah Anda yakin ingin keluar?'),
+            title: const WidgetText(text: 'Konfirmasi'),
+            content: const WidgetText(text: 'Apakah Anda yakin ingin keluar?'),
             actions: [
               TextButton(
                 onPressed: () {
                   SystemNavigator.pop();
                 },
-                child: Text('Ya'),
+                child: const WidgetText(
+                  text: 'Ya',
+                ),
               ),
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop(false);
                 },
-                child: Text('Tidak'),
+                child: const WidgetText(
+                  text: 'Tidak',
+                ),
               ),
             ],
           ),

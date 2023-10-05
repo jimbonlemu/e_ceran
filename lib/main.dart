@@ -14,7 +14,7 @@ class MainRun extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'E-Ceran',
       onGenerateRoute: Navigates.routeGenerator,
-      initialRoute: Navigates.splashView,
+      initialRoute: Navigates.stuffListView,
     );
   }
 }
