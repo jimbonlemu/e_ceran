@@ -1,4 +1,3 @@
-import 'package:e_ceran/global_assets/navigates.dart';
 import 'package:e_ceran/global_assets/widgets/widget_text.dart';
 import 'package:flutter/material.dart';
 

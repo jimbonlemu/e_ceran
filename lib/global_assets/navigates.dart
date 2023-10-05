@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Navigates {
+  static const String notFoundPage = 'NotFoundPage';
   static const String splashView = 'SplashView';
   static const String homeView = 'HomeView';
   static const String transactionView = 'TransactionView';
@@ -32,6 +33,10 @@ class Navigates {
         return PageTransition(
             child: const HistoryTransactionView(),
             type: PageTransitionType.rightToLeft);
+      case notFoundPage:
+        return PageTransition(
+            child: const NotFoundPage('Halaman Tidak Ditemukan : 404'),
+            type: PageTransitionType.fade);
       default:
         return PageTransition(
             child: const NotFoundPage('Halaman Tidak Ditemukan : 404'),

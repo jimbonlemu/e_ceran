@@ -5,6 +5,9 @@ class AppBarFormat extends StatelessWidget implements PreferredSizeWidget {
   final String styledAppBarTitle;
   final bool? isAppBarCenter;
   final bool? enabledBackButton;
+  final List<Widget>? actions;
+  final IconThemeData? iconThemeData;
+  
 
   const AppBarFormat({
     Key? key,
@@ -12,6 +15,8 @@ class AppBarFormat extends StatelessWidget implements PreferredSizeWidget {
     this.styledAppBarTitle = "",
     this.isAppBarCenter = false,
     this.enabledBackButton = false,
+    this.actions,
+    this.iconThemeData,
   }) : super(key: key);
 
   @override
@@ -56,6 +61,8 @@ class AppBarFormat extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
       centerTitle: isAppBarCenter,
+      actions: actions,
+      actionsIconTheme: iconThemeData,
     );
   }
 

@@ -15,21 +15,21 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    // Future.delayed(const Duration(seconds: 3), () {
-    //   setState(() {
-    //     _opacity = 1.0;
-    //   });
-    // }).then((_) => showSplashScreen());
+    Future.delayed(const Duration(seconds: 3), () {
+      setState(() {
+        _opacity = 1.0;
+      });
+    }).then((_) => showSplashScreen());
   }
 
-  // showSplashScreen() async {
-  //   return Timer(
-  //     const Duration(seconds: 3),
-  //     () {
-  //       Navigator.of(context).pushReplacementNamed(Navigates.homeView);
-  //     },
-  //   );
-  // }
+  showSplashScreen() async {
+    return Timer(
+      const Duration(seconds: 3),
+      () {
+        Navigator.of(context).pushReplacementNamed(Navigates.homeView);
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
