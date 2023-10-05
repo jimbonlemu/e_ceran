@@ -24,14 +24,14 @@ class WidgetText extends StatelessWidget {
     {
       'semibold': TextStyle(
         fontFamily: 'Arimo_semibold',
-        color: Colors.blue,
+        color: Colors.black,
         letterSpacing: 1,
       ),
     },
     {
       'medium': TextStyle(
         fontFamily: 'Arimo_medium',
-        color: Colors.green,
+        color: Colors.black,
         letterSpacing:1,
       ),
     },

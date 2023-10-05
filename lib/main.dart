@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'global_assets/navigates.dart';
 
 void main() {
-  
   runApp(const MainRun());
 }
 
@@ -11,7 +10,6 @@ class MainRun extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'E-Ceran',

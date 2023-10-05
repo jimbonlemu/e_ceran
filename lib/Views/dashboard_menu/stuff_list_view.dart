@@ -73,19 +73,24 @@ class _StuffListViewState extends State<StuffListView> {
                           ImagesPath.transactionIcon,
                           scale: 5,
                         ),
-                        title: Text('Barang ke-  ${a[index]}'),
-                        subtitle: Text('Jumlah barang :  ${_randomnumber()}'),
+                        title: WidgetText(
+                            text: '[${index + 1}] Nama Barang - ${a[index]}'),
+                        subtitle: WidgetText(
+                            styleType: 'regular',
+                            text: 'Jumlah barang :  ${_randomnumber()}'),
                         trailing: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.2,
                           child: Row(
                             children: [
                               IconButton(
+                                tooltip: 'Ubah Barang',
                                 onPressed: () {
                                   _removeItemInList(index);
                                 },
                                 icon: const Icon(Icons.edit),
                               ),
                               IconButton(
+                                tooltip: 'Hapus Barang',
                                 onPressed: () {
                                   _removeItemInList(index);
                                 },
