@@ -3,14 +3,17 @@ import 'package:flutter/material.dart';
 class WidgetText extends StatelessWidget {
   final String text;
   final double textSize;
-
+  final Color? color;
   final String? styleType;
+  final TextAlign? textAlign;
 
   const WidgetText({
     Key? key,
     this.text = '',
     this.textSize = 15,
     this.styleType,
+    this.color = Colors.black,
+    this.textAlign
   }) : super(key: key);
 
   static const List<Map<String, TextStyle>> _textStyles = [
@@ -32,7 +35,7 @@ class WidgetText extends StatelessWidget {
       'medium': TextStyle(
         fontFamily: 'Arimo_medium',
         color: Colors.black,
-        letterSpacing:1,
+        letterSpacing: 1,
       ),
     },
   ];
@@ -46,9 +49,11 @@ class WidgetText extends StatelessWidget {
         style: customStyle?.copyWith(fontSize: textSize) ??
             TextStyle(
               fontFamily: 'Arimo_bold',
-              color: Colors.black,
+              color: color,
               letterSpacing: 1.5,
               fontSize: textSize,
-            ));
+              
+            ),
+            textAlign: textAlign,);
   }
 }

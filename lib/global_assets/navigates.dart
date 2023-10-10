@@ -1,3 +1,4 @@
+
 import 'package:e_ceran/Views/dashboard_menu/history_transaction_view.dart';
 import 'package:e_ceran/Views/dashboard_view.dart';
 import 'package:e_ceran/Views/splash_view.dart';
@@ -13,6 +14,7 @@ class Navigates {
   static const String transactionView = 'TransactionView';
   static const String stuffListView = 'StuffListView';
   static const String historyTransactionView = 'HistoryTransactionView';
+  static const String stuffListDetailView = 'StuffListDetailView';
 
   static Route<dynamic> routeGenerator(RouteSettings settings) {
     switch (settings.name) {
