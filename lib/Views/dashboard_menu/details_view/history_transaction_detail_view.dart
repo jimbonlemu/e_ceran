@@ -16,24 +16,26 @@ class HistoryTransactionDetailView extends StatelessWidget {
         enabledBackButton: true,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            WidgetText(
-                text:
-                    'ID Transaksi : ${historyTransactionData.transactionID} '),
-            WidgetText(
-                text: 'Nama Pembeli : ${historyTransactionData.customerName}'),
-            WidgetText(
-                text: 'Barang :${historyTransactionData.transactionStuff} '),
-            WidgetText(
-                text:
-                    'Total Harga : ${historyTransactionData.transactionTotalPrice}'),
-            WidgetText(
-                text:
-                    'Tanggal Pembelian :${historyTransactionData.transactionDate} '),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              WidgetText(
+                  text:
+                      'ID Transaksi : ${historyTransactionData.transactionID} '),
+              WidgetText(
+                  text: 'Nama Pembeli : ${historyTransactionData.customerName}'),
+              WidgetText(
+                  text: 'Barang :${historyTransactionData.transactionStuff} '),
+              WidgetText(
+                  text:
+                      'Total Harga : ${historyTransactionData.transactionTotalPrice}'),
+              WidgetText(
+                  text:
+                      'Tanggal Pembelian :${historyTransactionData.transactionDate} '),
+            ],
+          ),
         ),
       ),
     );

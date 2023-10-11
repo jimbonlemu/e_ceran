@@ -44,42 +44,46 @@ class HomeView extends StatelessWidget {
             styledAppBarTitle: 'E-Ceran Dashboard',
           ),
           body: SafeArea(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+            child: Center(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    WidgetMenu(
-                      targetRoute: Navigates.transactionView,
-                      text: 'Transaksi',
-                      menuIcon: Image.asset(
-                        ImagesPath.transactionIcon,
-                        scale: 5,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        WidgetMenu(
+                          targetRoute: Navigates.transactionView,
+                          text: 'Transaksi',
+                          menuIcon: Image.asset(
+                            ImagesPath.transactionIcon,
+                            scale: 5,
+                          ),
+                        ),
+                        WidgetMenu(
+                          targetRoute: Navigates.stuffListView,
+                          text: 'Data Barang',
+                          menuIcon: Image.asset(
+                            ImagesPath.stuffListIcon,
+                            scale: 5,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
                     ),
                     WidgetMenu(
-                      targetRoute: Navigates.stuffListView,
-                      text: 'Data Barang',
+                      targetRoute: Navigates.historyTransactionView,
+                      text: 'Riwayat Transaksi',
                       menuIcon: Image.asset(
-                        ImagesPath.stuffListIcon,
+                        ImagesPath.historyTransactionIcon,
                         scale: 5,
                       ),
-                    ),
+                    )
                   ],
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                WidgetMenu(
-                  targetRoute: Navigates.historyTransactionView,
-                  text: 'Riwayat Transaksi',
-                  menuIcon: Image.asset(
-                    ImagesPath.historyTransactionIcon,
-                    scale: 5,
-                  ),
-                )
-              ],
+              ),
             ),
           )),
     );

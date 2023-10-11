@@ -16,29 +16,30 @@ class StuffListDetailView extends StatelessWidget {
         enabledBackButton: true,
       ),
       body: Center(
-        child: Column(
-          
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset(
-              stuffData.stuffImage,
-              height: 300,
-              width: 300,
-            ),
-            WidgetText(
-              text: 'Kode Barang : ${stuffData.stuffID}',
-            ),
-            WidgetText(
-              text: 'Nama Barang : ${stuffData.stuffName}',
-            ),
-            WidgetText(
-              text: 'Harga Barang : ${stuffData.stuffPrice}',
-            ),
-            WidgetText(
-              text: 'Stok Barang : ${stuffData.stuffStock}',
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                stuffData.stuffImage,
+                height: 300,
+                width: 300,
+              ),
+              WidgetText(
+                text: 'Kode Barang : ${stuffData.stuffID}',
+              ),
+              WidgetText(
+                text: 'Nama Barang : ${stuffData.stuffName}',
+              ),
+              WidgetText(
+                text: 'Harga Barang : ${stuffData.stuffPrice}',
+              ),
+              WidgetText(
+                text: 'Stok Barang : ${stuffData.stuffStock}',
+              ),
+            ],
+          ),
         ),
       ),
     );
